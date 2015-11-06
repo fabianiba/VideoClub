@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Planes Neckflix</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrapValidator.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  <body>
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="row" id="barra">
+        <div class="col-md-10">
+        <a href="../index.html"><img alt="Brand" src="../images/logo.png"></a>
+       </div>
+       <div class="col-md-2 boton">
+        <a href="../log.php" class="btn btn-danger">Iniciar Session</a>
+       </div>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+
+        <h1 class="page-header">Selecciona el plan ideal para ti</h1>
+        <h3>Cambia a un plan inferior o superior en cualquier momento</h3>
+
+        <br><br>
+
+        <div class="row flat">
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <ul class="plan plan1">
+                    <li class="plan-name" id="nomPlan">
+                        Basico
+                    </li>
+
+                    <input type="hidden" value="Basico" id="contratoOculto">
+
+                    <li class="plan-price">
+                        <strong>US$7,99</strong> / Mes
+                    </li>
+                    <li>
+                        <strong>HD</strong> NO
+                    </li>
+                    <li>
+                        <strong>ULTRA HD</strong> NO
+                    </li>
+                    <li>
+                        <strong>PANTALLAS</strong> 1
+                    </li>
+                    <li>
+                        <strong>PELICULAS</strong> ILIMITADAS
+                    </li>
+                    <li>
+                        <strong>SERIES</strong> ILIMITADAS
+                    </li>
+                    <li class="plan-action">
+                        <a class="btn btn-danger btn-lg btnC" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" data-plan="Basico" aria-controls="collapseExample">Contratar</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <ul class="plan plan2">
+                    <li class="plan-name" id="nomPlan">
+                        Estandar
+                    </li>
+
+                    <input type="hidden" value="Estandar" id="contratoOculto">
+
+                    <li class="plan-price">
+                        <strong>US$9,99</strong> / mes
+                    </li>
+                    <li>
+                        <strong>HD</strong> SI
+                    </li>
+                    <li>
+                        <strong>ULTRA HD</strong> NO
+                    </li>
+                    <li>
+                        <strong>PANTALLAS</strong> 2
+                    </li>
+                    <li>
+                        <strong>PELICULAS</strong> ILIMITADAS
+                    </li>
+                    <li>
+                        <strong>SERIES</strong> ILIMITADAS
+                    </li>
+                    <li class="plan-action">
+                     <a class="btn btn-danger btn-lg btnC" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" data-plan="Estandar" aria-controls="collapseExample">Contratar</a>
+                 </li>
+             </ul>
+         </div>
+
+
+         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <ul class="plan plan3">
+                <li class="plan-name" id="nomPlan">
+                    Advanced
+                </li>
+
+                <input type="hidden" value="Advanced" id="contratoOculto">
+
+                <li class="plan-price">
+                    <strong>US$11,99</strong> / mes
+                </li>
+                <li>
+                    <strong>HD</strong> SI
+                </li>
+                <li>
+                    <strong>ULTRA HD</strong> SI
+                </li>
+                <li>
+                    <strong>PANTALLAS</strong> 4
+                </li>
+                <li>
+                    <strong>PELICULAS</strong> ILIMITADAS
+                </li>
+                <li>
+                    <strong>SERIES</strong> ILIMITADAS
+                </li>
+                <li class="plan-action">
+                 <a class="btn btn-danger btn-lg btnC" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" data-plan="Advanced" aria-controls="collapseExample">Contratar</a>
+             </li>
+         </ul>
+     </div>
+     </div>
+
+        
+        <div class="collapse" id="collapseExample">
+            <section>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="page-header">
+                        <h2 id="nombrePlan"></h2>
+                    </div>
+
+                    <form id="defaultForm" method="POST" class="form-horizontal" action="insertarCliente.php"
+                          data-bv-message="This value is not valid"
+                          data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                          data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                          data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                        
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Nombre</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="firstName" name="firstName" required data-bv-notempty-message="El Nombre es requerido." />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Apellido</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="lastName" name="lastName" required data-bv-notempty-message="El Apellido es requerido." />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">DNI</label>
+                            <div class="col-lg-6">
+                                <input type="number" id="dni" class="form-control" name="dni" required data-bv-notempty-message="El DNI es requerido." data-bv-stringlength="true" data-bv-stringlength-min="8" data-bv-stringlength-max="10" data-bv-stringlength-message="El DNI debe tener entre 8 y 10 numeros" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Usuario</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="username" name="username" required data-bv-notempty-message="El Usuario es requerido." />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Email</label>
+                            <div class="col-lg-6">
+                                <input class="form-control" id="email" name="email" type="email" required   data-bv-emailaddress-message="La dirección de Email no es valido" data-bv-notempty-message="El Email es requerido." />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Contraseña</label>
+                            <div class="col-lg-5">
+                                <input type="password" id="password" class="form-control" name="password"
+                                       required data-bv-notempty-message="The password is required and cannot be empty"
+                                       data-bv-identical="true" data-bv-identical-field="confirmPassword" data-bv-identical-message="The password and its confirm are not the same"
+                                       data-bv-different="true" data-bv-different-field="username" data-bv-different-message="The password cannot be the same as username"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Repite password</label>
+                            <div class="col-lg-5">
+                                <input type="password" class="form-control" name="confirmPassword"
+                                       required data-bv-notempty-message="The confirm password is required and cannot be empty"
+                                       data-bv-identical="true" data-bv-identical-field="password" data-bv-identical-message="The password and its confirm are not the same"
+                                       data-bv-different="true" data-bv-different-field="username" data-bv-different-message="The password cannot be the same as username"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Nº de Tarjeta.</label>
+                            <div class="col-lg-6">
+                                <input type="number" class="form-control" id="numCard" name="numCard" required data-bv-notempty-message="El Numero es requerido." data-bv-stringlength="true" data-bv-stringlength-min="8" data-bv-stringlength-max="20" data-bv-stringlength-message="El numero de la tarjeta debe tener entre 8 y 20 numeros" />
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="contrato" name="contrato">
+
+
+                        <div class="form-group">
+                            <div class="col-lg-9 col-lg-offset-3">
+                                <button type="submit" class="btn btn-danger btn-lg" >Suscribirse</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+
+
+    </div>
+
+<div id="footer">
+  <div class="container">
+  <p>¿Tienes preguntas? Llama al 0-800-800-1300</p>
+    <p class="text-muted credit">By Informatorio 2015 </p>
+</div>
+</div>
+    
+    <script type="text/javascript">
+       $(document).ready(function() {
+
+            $(".btnC").on("click",function(e){
+                e.preventDefault;
+                $("#nombrePlan").text("Completa con tus datos. Para el paquete "+$(this).data('plan'));
+                $("#contrato").val($(this).data('plan'));
+             });
+
+
+        }); 
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#defaultForm').bootstrapValidator();
+        });
+    </script>
+
+    
+</body>
+</html>

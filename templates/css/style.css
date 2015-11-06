@@ -1,0 +1,75 @@
+nav.navbar.navbar-default {
+    height: 90px;
+}
+
+.container-fluid {
+    margin-top: 0%;
+}
+
+
+
+#normal_background {
+	height:630px;
+	background-image:url(/movie/images/Family.jpg);
+	background-size: cover;
+	/*background-image:url(http://i.imgur.com/shuVsWU.png);*/
+}
+
+#position_background {
+	height:400px;
+	padding-left: 25px;
+	padding-top: 50px;
+
+	/*background-image: url(http://s5.goodfon.su/image/602988-800x480.jpg);*/
+	/*background-repeat: no-repeat;*/
+	/*background-size: 100%;*/
+}
+
+
+#opacity_background {
+
+	height: 100%;
+	padding-top: 1%;
+	background-image:url(http://i.imgur.com/shuVsWU.png);
+
+}
+
+
+#bottom{
+	height:20em;
+}
+
+#highlight {
+
+	color: white;
+}
+
+#white_font {
+	color: white;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #f40612;
+    border-color: #f40612;
+}
+
+div#opacity_background {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+body {
+    background-color: #333;
+}
+
+p.text-center, h4.text-center, h5 {
+    color: white;
+}
+
+img.img-responsive {
+    margin-left: 27%;
+}
