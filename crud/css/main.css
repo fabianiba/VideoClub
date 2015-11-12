@@ -68,3 +68,8 @@ body {
 .col-md-2.boton {
     margin-top: 0.5%;
 }
+
+#barra{
+    margin-right: 0px; 
+    margin-left: -15px;
+}
